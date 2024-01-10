@@ -1,0 +1,23 @@
+LEETCODE PROBLEM: DUPLICATES
+{1,1,2,3,4,5,1,9}
+duplicate hai toh true otherwise false
+
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        
+       unordered_map<int,int> baalti;
+       for(int i=0;i<nums.size();i++)
+       {
+           if(baalti.count(nums[i])!=0)
+           {
+               return true;
+           }
+           else
+           {
+               baalti[nums[i]]=1;
+           }
+       }
+       return 0;
+    } 
+};
